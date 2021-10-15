@@ -67,7 +67,7 @@ status: true,
 
 ## Treatment-API
 
--  GET [https://stark-brushlands-13971.herokuapp.com/healthclinicapi/v1/treatments]      
+-  POST [https://stark-brushlands-13971.herokuapp.com/healthclinicapi/v1/treatments/appointmentid]      
 -  You need to give 1 key-value pair in the body of the API Like This:
           {
           "Treatment":""
