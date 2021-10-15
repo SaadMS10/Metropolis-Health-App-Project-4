@@ -34,8 +34,7 @@ status: true,
 
 - PATCH [https://stark-brushlands-13971.herokuapp.com//healthclinicapi/v1/users/login ]    
 - You need to give 2 key-value pair in the body of the API Like This:
-          {
-
+ {
 "email":"",
 "password":"",
 
@@ -47,7 +46,6 @@ status: true,
   id: " ",
   type/role:"",
   username: " ",
-
 }
 
 ## Appointnment-API
