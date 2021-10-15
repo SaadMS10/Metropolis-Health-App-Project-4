@@ -77,6 +77,6 @@ status: true,
           value:" token"
 
  - GET [https://stark-brushlands-13971.herokuapp.com/healthclinicapi/v1/treatments]  To Get All Treatment
- - GET [https://stark-brushlands-13971.herokuapp.com/healthclinicapi/v1/apointments/id ]  To Get One Treatment
- - PATCH [https://stark-brushlands-13971.herokuapp.com/healthclinicapi/v1/apointments/id ]  To Update One Treatment
- - DELETE [https://stark-brushlands-13971.herokuapp.com//healthclinicapi/v1/appointment/id ]  To Delete Treatment
+ - GET [https://stark-brushlands-13971.herokuapp.com/healthclinicapi/v1/treatments/id ]  To Get One Treatment
+ - PATCH [https://stark-brushlands-13971.herokuapp.com/healthclinicapi/v1/treatments/id ]  To Update One Treatment
+ - DELETE [https://stark-brushlands-13971.herokuapp.com//healthclinicapi/v1/treatments/id ]  To Delete Treatment
