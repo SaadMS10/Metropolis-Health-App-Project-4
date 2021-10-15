@@ -1,4 +1,7 @@
 const Appointment = require('../models/appointmentModel');
+const { promisify } = require('util');
+const jwt = require('jsonwebtoken');
+const User = require('../models/userModel');
 
 exports.GetAllappointments = async (req, res) => {
   try {
@@ -23,7 +26,15 @@ exports.Getappointment = async (req, res) => {
 };
 exports.Postappointment = async (req, res) => {
   try {
-    const newappointment = await Appointment.create(req.body);
+    const doctor = await User.findOne({ role: 'doctor' });
+    console.log(`Doctor: ${doctor.name}`);
+    const token = req.headers.authorization;
+    const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
+    const newappointment = await Appointment.create({
+      patientId: decoded.id,
+      doctorId: doctor._id,
+      time: req.body.time,
+    });
 
     res.status(201).json({ status: 'success', appointment: newappointment });
   } catch (err) {

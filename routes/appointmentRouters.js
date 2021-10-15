@@ -1,17 +1,23 @@
 const express = require('express');
 const router = express.Router();
-//Router With MongoDB
 const {
   GetAllappointments,
   Getappointment,
+  Postappointment,
   Updateappointment,
   Deleteappointment,
 } = require('./../controller/appointmentController');
-
-router.route('/').get(GetAllappointments);
+const {
+  protect,
+  protectappointments,
+} = require('./../controller/authController');
+router
+  .route('/')
+  .get(protect, protectappointments, GetAllappointments)
+  .post(protect, protectappointments, Postappointment);
 router
   .route('/:id')
-  .get(Getappointment)
-  .patch(Updateappointment)
-  .delete(Deleteappointment);
+  .get(protect, protectappointments, Getappointment)
+  .patch(protect, protectappointments, Updateappointment)
+  .delete(protect, protectappointments, Deleteappointment);
 module.exports = router;
