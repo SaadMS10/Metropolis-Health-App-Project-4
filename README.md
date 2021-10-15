@@ -20,15 +20,13 @@ Read This File For APIS
 ## Verification-API
 - PATCH [https://stark-brushlands-13971.herokuapp.com/healthclinicapi/v1/users/authenticate/token]  
 
-For This Verification Email Will Be Sent To You In The Given Email Address
+For This Verification Token Will Be Sent To You In The Given Email Address
 Payload Of the Token Will Be:
           {
           id: " ",
           status: true
           }
 
-- For Now On Generated Token Will Be Saved in the Database
-- But For Future You Should Provide It In The Header Of Api for authroized Access
 
 ## Login-API
 
