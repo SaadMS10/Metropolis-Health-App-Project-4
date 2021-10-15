@@ -22,10 +22,10 @@ Read This File For APIS
 
 For This Verification Email Will Be Sent To You In The Given Email Address
 Payload Of the Token Will Be:
-{
-id: " ",
-status: true,
-}
+          {
+          id: " ",
+          status: true
+          }
 
 - For Now On Generated Token Will Be Saved in the Database
 - But For Future You Should Provide It In The Header Of Api for authroized Access
@@ -37,7 +37,6 @@ status: true,
  {
 "email":"",
 "password":"",
-
 }
 
 - You need to save token for futher use
@@ -46,7 +45,7 @@ status: true,
   id: " ",
   type/role:"",
   username: " ",
-}
+  }
 
 ## Appointnment-API
 
