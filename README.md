@@ -18,7 +18,7 @@ Read This File For APIS
           }
 
 ## Verification-API
-- GET [https://stark-brushlands-13971.herokuapp.com/healthclinicapi/v1/users/authenticate/token]  
+- PATCH [https://stark-brushlands-13971.herokuapp.com/healthclinicapi/v1/users/authenticate/token]  
 
 For This Verification Email Will Be Sent To You In The Given Email Address
 Payload Of the Token Will Be:
